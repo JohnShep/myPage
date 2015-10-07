@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            
+            <!--
+             File:  http://weblab.cs.uml.edu/~jshepple/assignment3.html
+             Created by JT Shepple on 10/4/15. john_shepple@student.uml.edu
+             Student at UMass Lowell Taking course 91.461: GUI Programming I
+             Copyright (c) 2014 JT Shepple. All rights reserved.
+             This is JT's Personal Website used mainly for displaying GUI assignments.
+             Last updated by JT on 10/4
+             Last updated by JT on 10/5
+             -->
+            
+            <title> Assignment 5 </title>
+            
+            <!--
+             load jQuery library from the Google Content Delivery Network (CDN)
+             see http://encosia.com/3-reasons-why-you-should-let-google-host-jquery-for-you/
+             however, note that you obviously must be online for this to work
+             alternatively, you can download jQuery and store it locally from
+             http://jquery.com/download/
+             -->
+            
+            <link href="css/styles.css" type="text/css" rel="stylesheet">
+                
+                
+           
+            
+            
+    </head>
+    
+    <body>
+        
+        <div class="header">
+            
+            
+            <!-- I followed this video to setup the nav bar and links: https://www.youtube.com/watch?v=1tdRozm__K0 -->
+            <div class="container">
+                
+                <div class="logo">
+                    <h1><a href="index.html">JT Shepple</a><h1>
+                </div>
+                
+                
+                <div class="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="assignments.html">Assignments</a>
+                            
+                            <!--working on getting the assignments as a drop down menu
+                             <ul>
+                             <li>
+                             <a href="assignment1.html">Assignment 1</a>
+                             </li>
+                             <li>
+                             <a href="assignment2.html">Assignment 2</a>
+                             </li>
+                             </ul>
+                             -->
+                            
+                        </li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            
+                
+            <br>
+            <br>
+            <br>
+            <br>
+            
+            
+            <p><b> Assignment 5: </b></p>
+
+<div class="vid">
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/5NV6Rdv1a3I?rel=0" frameborder="0" allowfullscreen></iframe>
+
+</div>
+
+
+
+<div id="content"></div>
+
+
+
+                <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+                    <!-- load the JSON file containing the text of Lincoln's Gettysburg address -->
+                <script type="text/javascript">
+                    console.log("j");
+                    // this function will run after the body has been loaded
+                    jQuery(document).ready( function() {
+                                    jQuery.get( "a5.json", function( data ) {
+                                    placeContent( data ) ;  // construct output from the data read
+                                }, "json" );  // be sure to include this third parameter for weblab.cs.uml.edu
+                    });
+                </script>
+    
+            <div class = "border">
+        
+                <!-- script to place JSON text in the placeholder on this page -->
+                <script type="text/javascript">
+                    console.log("jt");
+                    // N.B.  This version *does* apply the CSS.
+                    function placeContent( song ) {
+                        var strContent = "";
+                        console.log("jt is");
+
+
+                        // create dynamic content from JSON
+                        strContent += "<h1 class='title'>" + song.songtitle + "</h1>" ;
+                        strContent += "<h2 class='artist'>by " + song.artist + "</h2>" ;
+                        
+                        // loop through all the paragraphs and sentences
+                        for ( var para = 0 ; para < song.text.lyrics.length ; para++ ) {
+                            strContent += "<p>" ;
+                            console.log("jt is");
+                            
+                            if(para == 0)
+                            {
+                                strContent += "<div class='p0' >" ;
+                            }
+                            if(para == 1)
+                            {
+                                strContent += "<div class='p1' >" ;
+                            }
+                            if(para == 2)
+                            {
+                                strContent += "<div class='p2' >" ;
+                            }
+                            if(para == 3)
+                            {
+                                strContent += "<div class='p3' >" ;
+                            }
+                            if(para == 4)
+                            {
+                                strContent += "<div class='p4' >" ;
+                            }
+
+
+<!--                        go through the sentences-->
+                            for ( var sent = 0 ; sent < song.text.lyrics[para].length ; sent++ ) {
+                                strContent += "<p>" ;
+                                strContent += song.text.lyrics[para][sent] + "&nbsp; " ;
+                                strContent += "</p>" ;
+
+                                
+                            }
+                            
+                            strContent += "</div>" ;
+                            
+<!--                        seperate each paragraph with a break-->
+
+                            strContent += "</p><br/>" ;
+                        }
+                        
+                        // place dynamic content on page
+                        // document.getElementById( "content" ).innerHTML = strContent ;
+                        $("#content").html( strContent ) ;
+                    }
+                </script>
+                
+            </div>
+
+        </div>
+        
+        <div class="footer_logos">
+            
+            <p>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px"
+                src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                alt="Valid CSS!" />
+            </a>
+            
+            <a href="http://www.w3.org/Icons/valid-html20-blue.png">
+                <img style = "border:0;width:88px;height:31px"
+                src="http://www.w3.org/Icons/valid-html20-blue.png"
+                alt="Valid HTML!" />
+            </a>
+            </p>
+            
+        </div>
+        
+        
+        
+    </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+

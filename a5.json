@@ -1,0 +1,39 @@
+{
+    "Documentation": "I listed the song title and artist with seperate tags and then I had an array in side an array for the 4 paragraph lyrics all inside the text array. Each paragraph is in a square box seperated by a comma. 
+    
+    "songtitle": "Get Lucky",
+    "artist": "Daft Punk",
+    "text": {
+        "lyrics": [
+                    [
+                            "Like the legend of the Phoenix",
+                            "All ends with beginnings",
+                            "What keeps the planets spinning,",
+                            "The force from the beginning"
+                    ],
+                    [
+                            "We've come too far to give up who we are",
+                            "So let's raise the bar and our cups to the stars"
+                    ],
+                    [
+                            "She's up all night to the sun",
+                            "I'm up all night to get some",
+                            "She's up all night for good fun",
+                            "I'm up all night to get lucky"
+                    ],
+                    [
+                           "We're up all night to the sun",
+                           "We're up all night to get some",
+                           "We're up all night for good fun",
+                           "We're up all night to get lucky"
+                    ],
+                    [
+                           "We're up all night to get lucky",
+                           "We're up all night to get lucky",
+                           "We're up all night to get lucky",
+                           "We're up all night to get lucky"
+                    ]
+
+            ]
+    }
+}

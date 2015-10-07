@@ -1,61 +1,185 @@
 /*
-             File:  http://weblab.cs.uml.edu/~jshepple/css/styles.css
-             Created by JT Shepple on 9/10/15. john_shepple@student.uml.edu
-             Student at UMass Lowell Taking course 91.461: GUI Programming I
-             Copyright (c) 2014 JT Shepple. All rights reserved.
-             Last updated by JT on 9/10
-	     Last updated by JT on 9/13
-             Last updated by JT on 9/18
-             Last updated by JT on 9/21
-             
+ 
+                File:  http://weblab.cs.uml.edu/~jshepple/css/styles.css
+                Created by JT Shepple on 9/10/15. john_shepple@student.uml.edu
+                Student at UMass Lowell Taking course 91.461: GUI Programming I
+                Copyright (c) 2014 JT Shepple. All rights reserved.
+                Last updated by JT on 9/10
+                Last updated by JT on 9/13
+                Last updated by JT on 9/18
+                Last updated by JT on 9/27
+                Last updated by JT on 9/25
+                Last updated by JT on 9/29
+                Last updated by JT on 10/4
+                Last updated by JT on 10/6
+ 
 */
 
+/*Background for all the pages*/
 body {
     width: 100%;
     margin: auto;
+    background-image: url("../plaid_background.jpg");
 }
 
+/*Size of text on window*/
 .container {
-    width: 960px;
-    margin: 0 auto;
+    width: 720px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/*color and position of nav bar on top of every page*/
 .header {
-    background: lightblue;
+    background: rgba(48,48,48, .5) ;
     width: 100%;
     top: 0;
     position: fixed;
 }
 
+/*Floated my name to the left and the links on the right*/
 .logo {
     float: left;
     font-family: "Helvetica";
-    font-size: 15px;
+    font-size: 10px;
+    color: white;
 }
 
+/*all of the links in nav bar, color light grey*/
 a {
     text-decoration: none;
+    color: rgba(232,232,232, .75) ;
 }
 
-li {
+/*change color of the links when the mouse is on it to a darker gray/black*/
+a:hover{
+    text-decoration: none;
+    color: rgba(40,40,40, .80) ;
+}
+
+/*all of the lists on each page*/
+.nav li {
     list-style: none;
     float: left;
     margin-left: 15px;
-    padding-top: 15px;
+    padding-top: auto;
     font-size: 20px;
+    color: white;
 
 }
 
+/*list of assignments on the assignments.html page*/
+.assignment{
+    list-style: none;
+    font-size: 32px;
+    text-align: center;
+    margin: auto;
+}
+
+/*assignment bullets*/
+.bullets {
+    margin: auto;
+}
+
+/*floats the links on the top right*/
 .nav {
     float: right;
 }
 
+/*color of the bullets*/
+.content {
+    color: white;
+}
+
+/*places the image on the homepage*/
 img.displayed {
     display: table;
     margin: auto;
 }
 
+/*the two w3c icons on homepage*/
 .footer_logos {
 	display: table;
 	margin: auto;
 }
+
+
+/*youtube vid on assignment 5*/
+.vid {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/*background behind artist title and lyrics*/
+.artist, .title, .p0, .p1, .p2, .p3, .p4{
+    background: rgba(0, 0, 0, .5);
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+/*makes title red*/
+.title {
+    color: red;
+    text-align: center;
+}
+
+/*artist text on assignment 5*/
+.artist {
+    color: green;
+    text-align: center;
+}
+
+
+/*paragraph 0*/
+.p0 p{
+    color: blue;
+    text-align: center;
+}
+
+/*paragraphg 1*/
+.p1 p{
+    color: #00FFFF;
+    text-align: center;
+
+}
+
+/*paragraph 2*/
+.p2 p{
+    color: blue;
+    text-align: center;
+}
+
+/*paragraph 3*/
+.p3 p{
+    color: #00FFFF;
+    text-align: center;
+    
+}
+
+/*paragraph 4*/
+.p4 p{
+    color: blue;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
