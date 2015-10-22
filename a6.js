@@ -8,6 +8,8 @@
  Last updated by JT on 10/14
  Last updated by JT on 10/15
  Last updated by JT on 10/16
+ Last updated by JT on 10/17
+ Last updated by JT on 10/19
  */
 
 /* This function calculates the multiplication table. */
@@ -18,13 +20,15 @@ function build_table() {
     var col_e = Number(document.getElementById('col_e').value);
     var row_s = Number(document.getElementById('row_s').value);
     var row_e = Number(document.getElementById('row_e').value);
-
+    
+    //swap column values
     if(col_s > col_e) {
         var temp1 = col_e;
         col_e = col_s;
         col_s = temp1;
     }
     
+    //swap row values
     if(row_s > row_e) {
         var temp2 = row_e;
         row_e = row_s;
@@ -32,20 +36,21 @@ function build_table() {
     }
     
     var calc = [];
-    
-    for (var x = 0; x <= Math.abs((col_e- col_s)); x++) {   // x < Ending length
+    //Absolute value to not do negitive columns
+    for (var x = 0; x <= Math.abs((col_e - col_s)); x++) {   // x < Ending length
         calc[x] = [];
     }
     
-    var hor = 0;          // Indexes for the 2D array.
+    // Indexes for the 2D array.
+    var hor = 0;
     var vert = 0;
     
     /* Used a 2D array from this post:
         https://stackoverflow.com/questions/966225/how-can-i-create-a-two-dimensional-array-in-javascript
     
-             vert beg  vert ending   */
+                 row beg     row ending   */
     for (var x = row_s; x <= row_e; x++) {
-        /*       hor beg  hor ending    */
+        /*           col beg     col ending    */
         for (var y = col_s; y <= col_e; y++) {
             calc[hor][vert] = x * y;    // Calculate the given spot in the multiplication table.
             console.log("x: ", x, "y: ", y);
