@@ -164,12 +164,28 @@ img.displayed {
     text-align: center;
 }
 
+/*    Assignment 6   \/           */
 
+/* table  */
+.wholetable {
+    color: white;
+    display: table;
+    margin: auto;
+}
 
+/*first column of table*/
+.first_column {
+    color: red;
+    background: blue;
+    border: 3px solid green;
+}
 
-
-
-
+/*first row of table*/
+.first_row{
+    color: yellow;
+    background: blue;
+    border: 3px solid green;
+}
 
 
 

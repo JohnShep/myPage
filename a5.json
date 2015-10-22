@@ -1,5 +1,5 @@
 {
-    "Documentation": "I listed the song title and artist with seperate tags and then I had an array in side an array for the 4 paragraph lyrics all inside the text array. Each paragraph is in a square box seperated by a comma. 
+    "Documentation": "I listed the song title and artist with seperate tags and then I had an array in side an array for the 4 paragraph lyrics all inside the text array. Each paragraph is in a square box seperated by a comma.",
     
     "songtitle": "Get Lucky",
     "artist": "Daft Punk",

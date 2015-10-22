@@ -4,20 +4,21 @@
         <meta charset="utf-8">
             
             <!--
-             File:  http://weblab.cs.uml.edu/~jshepple/assignment1.html
-             Created by JT Shepple on 9/5/15. john_shepple@student.uml.edu
+             File:  http://weblab.cs.uml.edu/~jshepple/assignment3.html
+             Created by JT Shepple on 10/14/15. john_shepple@student.uml.edu
              Student at UMass Lowell Taking course 91.461: GUI Programming I
              Copyright (c) 2014 JT Shepple. All rights reserved.
              This is JT's Personal Website used mainly for displaying GUI assignments.
-             Last updated by JT on 9/5
-             Last updated by JT on 9/6
-             Last updated by JT on 9/8
-             Last updated by JT on 9/9
-             Last updated by JT on 9/10
+             Last updated by JT on 10/14
              -->
             
-            <title> Assignment 1 </title>
+            <title> Assignment 6 </title>
+            
+            
             <link href="css/styles.css" type="text/css" rel="stylesheet">
+                
+                
+                
                 
                 
                 </head>
@@ -25,6 +26,7 @@
     <body>
         
         <div class="header">
+            
             
             <!-- I followed this video to setup the nav bar and links: https://www.youtube.com/watch?v=1tdRozm__K0 -->
             <div class="container">
@@ -61,22 +63,38 @@
         
         <div class="container">
             <div class="content">
-                
-                <br>
-                <br>
-                <br>
-                
-                <p><b> Assignment 1: </b></p>
-                
-                    <ul class="bullets">
-                        <li>Complete course registration</li>
-                        <li>Get server Setup</li>
-                        <li>Install Netbeans</li>
-                    </ul>
-                
-            </div>
             
+            <br>
+            <br>
+            <br>
+            <br>
+            
+            
+            <p><b> Assignment 6: </b></p>
+            
+                <div class = "tableform">
+                    <form onsubmit="return build_table();">
+<!--                        //Each label and their text box             -->
+                        <label> Row Beginning number</label>
+                        <input type="number" name="row_s" id="row_s" value="1"><br/>
+                        <label> Row Ending number</label>
+                        <input type="number" name="row_e" id="row_e" value="1"><br/>
+                        <label> Column Beginning number</label>
+                        <input type="number" name="col_s" id="col_s" value="1"><br/>
+                        <label> Column Ending number</label>
+                        <input type="number" name="col_e" id="col_e" value="1"><br/>
+                            
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+
+                <br/>
+            </div>
         </div>
+        
+        <div id="table"></div>
+        
+        
         
         <div class="footer_logos">
             
@@ -96,11 +114,18 @@
             
         </div>
         
+        <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+        <script type='text/javascript' src="a6.js"></script>
         
     </body>
     
-    
 </html>
+
+
+
+
+
 
 
 
