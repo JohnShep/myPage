@@ -4,21 +4,21 @@
         <meta charset="utf-8">
             
             <!--
-             File:  http://weblab.cs.uml.edu/~jshepple/assignment6.html
-             Created by JT Shepple on 10/14/15. john_shepple@student.uml.edu
+             File:  http://weblab.cs.uml.edu/~jshepple/assignment7.html
+             Created by JT Shepple on 11/1/15. john_shepple@student.uml.edu
              Student at UMass Lowell Taking course 91.461: GUI Programming I
-             Copyright (c) 2014 JT Shepple. All rights reserved.
+             Copyright (c) 2015 JT Shepple. All rights reserved.
              This is JT's Personal Website used mainly for displaying GUI assignments.
-             Last updated by JT on 10/11
-             Last updated by JT on 10/14
-             Last updated by JT on 10/16
-             Last updated by JT on 10/19
+             Last updated by JT on 11/1
+             Last updated by JT on 11/2
+             Last updated by JT on 11/4
              -->
             
-            <title> Assignment 6 </title>
+            <title> Assignment 7 </title>
             
             
             <link href="css/styles.css" type="text/css" rel="stylesheet">
+                
                 
     </head>
     
@@ -62,40 +62,45 @@
         
         <div class="container">
             <div class="content">
-            
-            <br>
-            <br>
-            <br>
-            <br>
-            
-            
-            <p><b> Assignment 6: </b></p>
-            
+                
+                <br>
+                <br>
+                <br>
+                <br>
+                
+                
+                <p><b> Assignment 7: </b></p>
+                
                 <div class = "tableform">
-                    <form onsubmit="return build_table();">
-<!--                        //Each label and their text box             -->
+                    <form id="mult_form" name="mult_form" method="GET" action="">
+                        <!--                        //Each label and their text box             -->
                         <label> Row Beginning number</label>
-                        <input type="number" name="row_s" id="row_s" value="1"><br/>
+                        <input type="text" name="row_s" id="row_s" value="" required><br/>
                         <label> Row Ending number</label>
-                        <input type="number" name="row_e" id="row_e" value="1"><br/>
+                        <input type="text" name="row_e" id="row_e" value="" required><br/>
                         <label> Column Beginning number</label>
-                        <input type="number" name="col_s" id="col_s" value="1"><br/>
+                        <input type="text" name="col_s" id="col_s" value="" required><br/>
                         <label> Column Ending number</label>
-                        <input type="number" name="col_e" id="col_e" value="1"><br/>
-                            
-<!--                            submit button                           -->
+                        <input type="text" name="col_e" id="col_e" value="" required><br/>
+                                
+                        <!--                            submit button                           -->
                         <input type="submit" value="Submit">
-                    </form>
-                </div>
+                            
 
+                    </form>
+                    
+                    <br/>
+                    
+                    <div id="warn_msg"></div>
+                    
+                </div>
+                
                 <br/>
                 
             </div>
         </div>
         
         <div id="table"></div>
-        
-        
         
         <div class="footer_logos">
             
@@ -116,8 +121,20 @@
         </div>
         
         <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-        <script type='text/javascript' src="a6.js"></script>
+        
+        <script type='text/javascript' src="a7.js"></script>
+        
+        <!-- jQuery Validation plugin -->
+        <script type='text/javascript' src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.js"></script>
+        <script type='text/javascript' src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/additional-methods.js"></script>
+        
+        
+        
+        <script>
+            $(document).ready(function() {
+                validate();
+            });
+        </script>
         
     </body>
     

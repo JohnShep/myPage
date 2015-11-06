@@ -187,7 +187,15 @@ img.displayed {
 }
 
 
+/*label{*/
+/*    display: inline-block;*/
+/*    width: 200px;*/
+/*    text-align: right;*/
+/*}*/
 
+.error{
+    color: red;
+}
 
 
 
