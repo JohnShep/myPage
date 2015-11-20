@@ -16,12 +16,10 @@
             
             <title> Assignment 8 </title>
             
-            
             <link href="css/styles.css" type="text/css" rel="stylesheet">
                 
-            <!-- jQuery UI Library -->
-            <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-
+            <!-- jQuery UI Library (Dark Theme) -->
+            <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/dot-luv/jquery-ui.css">
                 
     </head>
     
@@ -29,14 +27,12 @@
         
         <div class="header">
             
-            
             <!-- I followed this video to setup the nav bar and links: https://www.youtube.com/watch?v=1tdRozm__K0 -->
             <div class="container">
                 
                 <div class="logo">
                     <h1><a href="index.html">JT Shepple</a></h1>
                 </div>
-                
                 
                 <div class="nav">
                     <ul>
@@ -71,34 +67,32 @@
                 <br>
                 <br>
                 
-                
                 <p><b> Assignment 8: </b></p>
                 
                 <div class = "tableform">
                     <form id="mult_form" name="mult_form" method="GET">
                         <!--          //Each label and their text box             -->
                         <label> Row Beginning number</label>
-                        <input type="text" name="row_s" id="row_s" value="" required><br/>
+                        <input type="text" name="row_s" id="row_s" value="0" required><br/>
                         <div id="slider_R_B"></div>
 
                         <label> Row Ending number</label>
-                        <input type="text" name="row_e" id="row_e" value="" required><br/>
+                        <input type="text" name="row_e" id="row_e" value="0" required><br/>
                         <div id="slider_R_E"></div>
                         
                         <label> Column Beginning number</label>
-                        <input type="text" name="col_s" id="col_s" value="" required><br/>
+                        <input type="text" name="col_s" id="col_s" value="0" required><br/>
                         <div id="slider_C_B"></div>
 
                         <label> Column Ending number</label>
-                        <input type="text" name="col_e" id="col_e" value="" required><br/>
+                        <input type="text" name="col_e" id="col_e" value="0" required><br/>
                         <div id="slider_C_E"></div>
                         
                         <br/>
                         <!--         submit button        -->
-                        <input type="submit" value="Submit">
-                                            
-                                            
-                                            </form>
+                        <input type="submit" onClick="save_tab();" value="Save Table">
+                            
+                    </form>
                     
                     <br/>
                     
@@ -113,6 +107,10 @@
         
         <div id="table"></div>
         
+        <div id="tabs">
+            <ul>
+            </ul>
+        </div>
         
         
         <div class="footer_logos">
@@ -133,6 +131,7 @@
             
         </div>
         
+        
         <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         
         <script type='text/javascript' src="a8.js"></script>
@@ -140,10 +139,10 @@
         <!-- Slider and Tab -->
         <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
         
+        
         <!-- jQuery Validation plugin -->
         <script type='text/javascript' src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.js"></script>
         <script type='text/javascript' src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/additional-methods.js"></script>
-        
         
         
         <script>

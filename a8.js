@@ -181,74 +181,126 @@ function validate() {
 
 function slider()
 {
-    // Horizontal Start Slider
+    // Row Begin Slider
     $("#slider_R_B").slider({
           min: -15,
           max: 15,
           slide: function(event, ui) {
           $("#row_s").val(ui.value);
                             
-          submit();  // Call the auto submit function on slide.
+          submit();
           }
     });
     $("#row_s").on("keydown", function() {
         $("#slider_R_B").slider("value", this.value);
         
-        submit();  // Call the auto submit function on keydown as well.
+        submit();
     });
     
-    // Horizontal End Slider
+    // Row End Slider
     $("#slider_R_E").slider({
         min: -15,
         max: 15,
         slide: function(event, ui) {
         $("#row_e").val(ui.value);
                             
-        submit();  // Call the auto submit function on slide.
-        }
+        submit();
+    }
     });
     $("#row_e").on("keydown", function() {
         $("#slider_R_E").slider("value", this.value);
         
-        submit();  // Call the auto submit function on keydown as well.
+        submit();
     });
     
-    // Vertical Start Slider
+    // Column Begin Slider
     $("#slider_C_B").slider({
         min: -15,
         max: 15,
         slide: function(event, ui) {
         $("#col_s").val(ui.value);
         
-        submit();  // Call the auto submit function on slide.
+        submit();
         }
     });
     $("#col_s").on("keydown", function() {
         $("#slider_C_B").slider("value", this.value);
         
-        submit();  // Call the auto submit function on keydown as well.
+        submit();
     });
     
-    // Vertical End Slider
+    // Column End Slider
     $("#slider_C_E").slider({
         min: -15,
         max: 15,
         slide: function(event, ui) {
         $("#col_e").val(ui.value);
         
-        submit();  // Call the auto submit function on slide.
+        submit();
         }
     });
     $("#col_e").on("keydown", function() {
         $("#slider_C_E").slider("value", this.value);
                    
-        submit();  // Call the auto submit function on keydown as well.
+        submit();
     });
 
 }
 
+var tabIndex = 1;
 
+function save_tab() {
+    // I struggled with the tab section so I got some help from Jason
+    var tabCount = $("#tabs li").length + 1;
+    
+    if(tabCount > 10) {
+        alert("Sorry, only 10 multiplication tables allowed at a time.");
+        return false;
+    }
+    
+    // Initialize the jQuery UI tabs.
+    $( "#tabs" ).tabs();
+    
+    tabIndex++;
+    
+    var row_s = Number(document.getElementById('row_s').value);
+    var row_e = Number(document.getElementById('row_e').value);
+    var col_s = Number(document.getElementById('col_s').value);
+    var col_e = Number(document.getElementById('col_e').value);
+    
+    // Create the title bar, add to .append()
+    var title = "<li class='tab'><a href='#tab-" + tabIndex + "'>(" + row_s +
+    " to " + row_e + ") x (" + col_s + " to " + col_e + ")</a>" +
+    "<span class='ui-icon ui-icon-close' role='presentation'></span>" + "</li>";
+    
+    $("div#tabs ul").append(title);
+    
+    // Add the table, refresh the tabs div and set active.
+    $("div#tabs").append('<div id="tab-' + tabIndex + '">' + $("#table").html() + '</div>');
+    $("#tabs").tabs("refresh");
+    $("#tabs").tabs("option", "active", -1);
+    
+    $("#tabs").delegate("span.ui-icon-close", "click", function() {
+          var panelID = $(this).closest("li").remove().attr("aria-controls");
+          $("#" + panelID).remove();
+                          
+          // Refresh tabs
+          try {
+                $("#tabs").tabs("refresh");
+          } catch (e) { }
+          
+          // Destroy tab
+          if( $('div#tabs ul li.tab').length == 0) {
+          try {
+                $("#tabs").tabs("destroy");
+          } catch (e) { }
+          
+          return false;
+          }
+          });
+}
 
+//Refreshes table when the form is valid
 function submit() {
     if( $("form#mult_form").valid() == true ) {
         
