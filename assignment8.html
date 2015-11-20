@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            
+            <!--
+             File:  http://weblab.cs.uml.edu/~jshepple/assignment8.html
+             Created by JT Shepple on 11/15/15. john_shepple@student.uml.edu
+             Student at UMass Lowell Taking course 91.461: GUI Programming I
+             Copyright (c) 2015 JT Shepple. All rights reserved.
+             This is JT's Personal Website used mainly for displaying GUI assignments.
+             Last updated by JT on 11/15
+             Last updated by JT on 11/17
+             Last updated by JT on 11/18
+             -->
+            
+            <title> Assignment 8 </title>
+            
+            
+            <link href="css/styles.css" type="text/css" rel="stylesheet">
+                
+            <!-- jQuery UI Library -->
+            <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+                
+    </head>
+    
+    <body>
+        
+        <div class="header">
+            
+            
+            <!-- I followed this video to setup the nav bar and links: https://www.youtube.com/watch?v=1tdRozm__K0 -->
+            <div class="container">
+                
+                <div class="logo">
+                    <h1><a href="index.html">JT Shepple</a></h1>
+                </div>
+                
+                
+                <div class="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="assignments.html">Assignments</a>
+                            
+                            <!--working on getting the assignments as a drop down menu
+                             <ul>
+                             <li>
+                             <a href="assignment1.html">Assignment 1</a>
+                             </li>
+                             <li>
+                             <a href="assignment2.html">Assignment 2</a>
+                             </li>
+                             </ul>
+                             -->
+                            
+                        </li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="content">
+                
+                <br>
+                <br>
+                <br>
+                <br>
+                
+                
+                <p><b> Assignment 8: </b></p>
+                
+                <div class = "tableform">
+                    <form id="mult_form" name="mult_form" method="GET">
+                        <!--          //Each label and their text box             -->
+                        <label> Row Beginning number</label>
+                        <input type="text" name="row_s" id="row_s" value="" required><br/>
+                        <div id="slider_R_B"></div>
+
+                        <label> Row Ending number</label>
+                        <input type="text" name="row_e" id="row_e" value="" required><br/>
+                        <div id="slider_R_E"></div>
+                        
+                        <label> Column Beginning number</label>
+                        <input type="text" name="col_s" id="col_s" value="" required><br/>
+                        <div id="slider_C_B"></div>
+
+                        <label> Column Ending number</label>
+                        <input type="text" name="col_e" id="col_e" value="" required><br/>
+                        <div id="slider_C_E"></div>
+                        
+                        <br/>
+                        <!--         submit button        -->
+                        <input type="submit" value="Submit">
+                                            
+                                            
+                                            </form>
+                    
+                    <br/>
+                    
+                    <div id="warn_msg"></div>
+                    
+                </div>
+                
+                <br/>
+                
+            </div>
+        </div>
+        
+        <div id="table"></div>
+        
+        
+        
+        <div class="footer_logos">
+            
+            <p>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px"
+                src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                alt="Valid CSS!" />
+            </a>
+            
+            <a href="http://validator.w3.org/check?uri=referer">
+                <img style = "border:0;width:88px;height:31px"
+                src="http://www.w3.org/Icons/valid-html20-blue.png"
+                alt="Valid HTML!" />
+            </a>
+            </p>
+            
+        </div>
+        
+        <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+        <script type='text/javascript' src="a8.js"></script>
+        
+        <!-- Slider and Tab -->
+        <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        
+        <!-- jQuery Validation plugin -->
+        <script type='text/javascript' src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.js"></script>
+        <script type='text/javascript' src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/additional-methods.js"></script>
+        
+        
+        
+        <script>
+            $(document).ready(function() {
+                              
+            validate();
+            slider();
+                              
+            });
+        </script>
+        
+    </body>
+    
+</html>
+
+

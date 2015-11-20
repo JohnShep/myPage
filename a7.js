@@ -1,6 +1,6 @@
 /*
 
- File:  http://weblab.cs.uml.edu/~jshepple/assignment3.html
+ File:  http://weblab.cs.uml.edu/~jshepple/a7.js
  Created by JT Shepple on 11/1/15. john_shepple@student.uml.edu
  Student at UMass Lowell Taking course 91.461: GUI Programming I
  Copyright (c) 2014 JT Shepple. All rights reserved.
