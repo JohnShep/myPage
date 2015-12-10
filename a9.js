@@ -42,7 +42,7 @@ var pieces = [
     {"letter":"X", "value":8,  "amount":1},
     {"letter":"Y", "value":4,  "amount":2},
     {"letter":"Z", "value":10, "amount":1},
-    {"letter":"_", "value":0,  "amount":2}
+    {"letter":"BL", "value":0,  "amount":2}
 ];
 
 // JavaScript object of game board
