@@ -187,10 +187,85 @@ img.displayed {
 }
 
 
-
 .error{
     color: red;
 }
+
+
+.scrabbleTitle {
+    margin: auto;
+    text-align: center;
+}
+
+/*makes sure everything is in the middle like board and rack*/
+.middle {
+    margin: auto;
+    text-align: center;
+}
+
+.scoretext {
+    font-size: 30px;
+    color: white;
+    margin: auto;
+    text-align: center;
+}
+
+.buttons {
+    margin: auto;
+    text-align: center;
+}
+
+
+.pieces {
+    height: 70px;
+    width: 70px;
+}
+
+.droppable {
+    height: 75px;
+    width: 90px;
+}
+
+
+table {
+    border: solid 2px white;
+    border: solid 5px black;
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: fixed;
+    background: url("../Scrabble/row.png");
+}
+
+td {
+    height: 80px;
+    width: 80px;
+    background: #D2B48B;
+    border: solid 2px white;
+}
+
+
+.doubleletter{
+    background-image: url("../Scrabble/doubleletter.png");
+}
+
+.doubleword{
+/*    currently working on*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

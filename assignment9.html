@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            
+            <!--
+             File:  http://weblab.cs.uml.edu/~jshepple/assignment9.html
+             Created by JT Shepple on 12/3/15. john_shepple@student.uml.edu
+             Student at UMass Lowell Taking course 91.461: GUI Programming I
+             Copyright (c) 2015 JT Shepple. All rights reserved.
+             This is JT's Personal Website used mainly for displaying GUI assignments.
+             Last updated by JT on 12/3
+             Last updated by JT on 12/4
+             Last updated by JT on 12/5
+             Last updated by JT on 12/6
+             Last updated by JT on 12/7
+
+             -->
+            
+            <title> Assignment 8 </title>
+            
+            <link href="css/styles.css" type="text/css" rel="stylesheet">
+                
+            <!-- jQuery UI Library (Dark Theme) -->
+            <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/dot-luv/jquery-ui.css">
+                    
+    </head>
+    
+    <body>
+        
+        <div class="header">
+            
+            <!-- I followed this video to setup the nav bar and links: https://www.youtube.com/watch?v=1tdRozm__K0 -->
+            <div class="container">
+                
+                <div class="logo">
+                    <h1><a href="index.html">JT Shepple</a></h1>
+                </div>
+                
+                <div class="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="assignments.html">Assignments</a>
+                            
+                            <!--working on getting the assignments as a drop down menu
+                             <ul>
+                             <li>
+                             <a href="assignment1.html">Assignment 1</a>
+                             </li>
+                             <li>
+                             <a href="assignment2.html">Assignment 2</a>
+                             </li>
+                             </ul>
+                             -->
+                            
+                        </li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        <br> <br>
+        
+        <div class="container">
+            <div class="content">
+                <div class="scrabbleTitle">
+                    <h1 class = "name">
+                        <span> SCRABBLE GAME! </span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+  
+    <!-- First row = Row -->
+
+        <div class='middle'>
+        </div>
+        
+        <div class='board'>
+            <table id='the_table'>
+                <tr>
+<!--                    //Still working on the doubleword feaature       -->
+                    <td id=drop0 class="doubleword"> </td>
+                    <td id=drop1>
+                    <td id=drop2>
+                    <td id=drop3 class="doubleletter"> </td>
+                    <td id=drop4>
+                    <td id=drop5>
+                    <td id=drop6>
+                    <td id=drop7 class="doubleword"> </td>
+                    <td id=drop8>
+                    <td id=drop9>
+                    <td id=drop10>
+                    <td id=drop11 class="doubleletter"> </td>
+                    <td id=drop12>
+                    <td id=drop13>
+                    <td id=drop14 class="doubleword"> </td>
+                </tr>
+            </table>
+        </div>
+        
+        <br>
+        <br>
+
+    <!-- Second row = Rack and Letters in Hand-->
+
+        <div class='middle'>
+            <img id="rackhand" src='Scrabble/rack.png'>
+        </div>
+
+
+
+    <!--     Third row = Tiles on Rack -->
+        <div id="rack"></div>
+
+    <!-- Fourth row = Submit and Reset Button -->
+
+    <div class="buttons">
+        <button onclick="javascript: alert('In Progress');">Submit</button>
+        <button onclick="javascript: alert('In Progress');">Reset</button>
+    </div>
+    
+    <br>
+
+
+  <!-- Fifth row = Word and Scores -->
+
+      <div class="scoretext">
+          Word: <span id="word">___ </span>  Score: <span id="score">0</span>
+      </div>
+      <br>
+      <br>
+  
+        <div class="footer_logos">
+            
+            <p>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                    <img style="border:0;width:88px;height:31px"
+                    src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                    alt="Valid CSS!" />
+                </a>
+                
+                <a href="http://validator.w3.org/check?uri=referer">
+                    <img style = "border:0;width:88px;height:31px"
+                    src="http://www.w3.org/Icons/valid-html20-blue.png"
+                    alt="Valid HTML!" />
+                </a>
+            </p>
+            
+        </div>
+        
+        
+        <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+        <script type='text/javascript' src="a9.js"></script>
+        
+        <!-- jQuery -->
+        <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        
+        
+        <!-- jQuery Validation plugin -->
+        <script type='text/javascript' src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.js"></script>
+        <script type='text/javascript' src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/additional-methods.js"></script>
+        
+    <script>
+        $( document ).ready(function() {
+            load_pieces();
+            load_targets();
+        });
+    </script>
+
+    </body>
+    
+</html>
+
+
